@@ -18,32 +18,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TuK-Zz-CfS">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TuK-Zz-CfS">
                                 <rect key="frame" x="0.0" y="52" width="375" height="615"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUI-2p-61A">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUI-2p-61A">
                                 <rect key="frame" x="22" y="14" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="fLu-iA-XHN"/>
+                                </constraints>
                                 <state key="normal" title="Back"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySG-KC-phK">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySG-KC-phK">
                                 <rect key="frame" x="308" y="14" width="56" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="uFi-S8-yqy"/>
+                                </constraints>
                                 <state key="normal" title="Forward"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ZT-O4-M6N">
+                                <rect key="frame" x="64" y="15" width="236" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Lme-u3-Lmo"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TuK-Zz-CfS" secondAttribute="trailing" id="1Xz-vd-01A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TuK-Zz-CfS" secondAttribute="bottom" id="5Rw-Je-1s8"/>
+                            <constraint firstItem="KUI-2p-61A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="9hD-KO-TP2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ySG-KC-phK" secondAttribute="trailing" constant="11" id="Kls-q3-Vje"/>
+                            <constraint firstItem="9ZT-O4-M6N" firstAttribute="leading" secondItem="KUI-2p-61A" secondAttribute="trailing" constant="8" id="Vdu-Nc-sr4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="9ZT-O4-M6N" secondAttribute="top" constant="5" id="efv-bs-EZE"/>
+                            <constraint firstItem="ySG-KC-phK" firstAttribute="leading" secondItem="9ZT-O4-M6N" secondAttribute="trailing" constant="8" id="g14-8f-oL2"/>
+                            <constraint firstItem="TuK-Zz-CfS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="jeb-pa-j8g"/>
+                            <constraint firstItem="ySG-KC-phK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="14" id="mHe-vV-uNL"/>
+                            <constraint firstItem="TuK-Zz-CfS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="moC-kB-TzV"/>
+                            <constraint firstItem="KUI-2p-61A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="14" id="nw9-rz-Up7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="backButton" destination="KUI-2p-61A" id="hOk-FC-pfC"/>
                         <outlet property="forwardButton" destination="ySG-KC-phK" id="lg2-O3-1NG"/>
+                        <outlet property="urlTextField" destination="9ZT-O4-M6N" id="KEO-Ho-sEL"/>
                         <outlet property="webView" destination="TuK-Zz-CfS" id="gX5-th-Alc"/>
                     </connections>
                 </viewController>
