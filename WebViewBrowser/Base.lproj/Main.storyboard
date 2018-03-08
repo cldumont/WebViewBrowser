@@ -32,6 +32,9 @@
                                     <constraint firstAttribute="width" constant="34" id="fLu-iA-XHN"/>
                                 </constraints>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fBm-Qk-eYX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySG-KC-phK">
                                 <rect key="frame" x="308" y="14" width="56" height="30"/>
@@ -39,6 +42,9 @@
                                     <constraint firstAttribute="width" constant="56" id="uFi-S8-yqy"/>
                                 </constraints>
                                 <state key="normal" title="Forward"/>
+                                <connections>
+                                    <action selector="forwardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uyu-GF-KkU"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9ZT-O4-M6N">
                                 <rect key="frame" x="64" y="15" width="236" height="30"/>
